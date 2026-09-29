@@ -1,0 +1,130 @@
+# FISI Admin Suite
+
+Die FISI Admin Suite ist eine modulare Windows-Server-Management-Anwendung für Fachinformatiker für Systemintegration, Systemadministratoren und Service-Desk-Mitarbeiter.
+
+Das Ziel der Anwendung ist, häufige administrative Aufgaben in einer modernen und zentralen Benutzeroberfläche zusammenzuführen. Dazu gehören unter anderem die Verwaltung von Benutzern, Gruppen, Servern, administrativen Aufträgen und rollenbasierten Zugriffsrechten.
+
+## Aktueller Entwicklungsstand
+
+Das Repository enthält einen MVP auf Basis von C# und .NET 8. Der aktuelle Entwicklungsstand verwendet Demonstrationsdaten und ist noch nicht für den direkten Einsatz in einer produktiven Unternehmensumgebung vorgesehen.
+
+## Technologien
+
+- C# und .NET 8
+- Windows Presentation Foundation
+- ASP.NET Core Web API
+- .NET Worker Service
+- rollenbasierte Zugriffskontrolle
+- REST-API-Kommunikation
+- modulare Projektstruktur
+
+## Projektmodule
+
+### FisiAdmin.Desktop
+
+Die WPF-Desktopanwendung stellt die grafische Benutzeroberfläche bereit.
+
+Enthaltene Funktionen:
+
+- Anmeldefenster
+- modernes Admin-Dashboard
+- Benutzerübersicht
+- Benutzersuche
+- Serverübersicht
+- Rollenanzeige
+- Sitzungsverwaltung
+- Abmeldefunktion
+
+### FisiAdmin.Api
+
+Die ASP.NET-Core-Web-API enthält die zentrale Anwendungslogik.
+
+Enthaltene Funktionen:
+
+- Login-Endpunkt
+- serverseitige Sitzungsverwaltung
+- rollenbasierte Berechtigungsprüfung
+- Benutzer-Endpunkte
+- Dashboarddaten
+- Serverstatus
+- administrative Aufträge
+- Benutzer-Onboarding-Endpunkt
+- Benutzerentsperrung
+
+### FisiAdmin.Agent
+
+Der Worker Service dient als Grundlage für die spätere Ausführung administrativer Aufgaben auf Windows-Servern.
+
+Geplante Aufgaben:
+
+- Active-Directory-Verwaltung
+- PowerShell-Ausführung
+- Server-Monitoring
+- Dateiserververwaltung
+- Verarbeitung administrativer Aufträge
+- Rückmeldung von Ausführungsergebnissen
+
+### FisiAdmin.Domain
+
+Die Domain-Bibliothek enthält gemeinsame Datenmodelle und Rollendefinitionen.
+
+Dazu gehören:
+
+- Benutzerkonten
+- Rollen
+- Anmeldeinformationen
+- Dashboarddaten
+- Serverstatus
+- Benutzer-Onboarding
+- administrative Aufträge
+
+## Rollenmodell
+
+Die Anwendung enthält derzeit folgende Rollen:
+
+- PlatformAdmin
+- AdAdmin
+- ServiceDesk
+- Auditor
+- ReadOnly
+
+Berechtigungen werden nicht nur in der Benutzeroberfläche, sondern zusätzlich im Backend geprüft.
+
+## Geplante Funktionen
+
+- Active-Directory-Verwaltung
+- Benutzer-Onboarding
+- Gruppenverwaltung
+- DNS-Management
+- DHCP-Management
+- Microsoft-365-Integration
+- Microsoft Entra ID
+- Exchange Online
+- Dateiserververwaltung
+- Druckerverwaltung
+- Netzwerkmanagement
+- Gerätemanagement
+- Softwareverteilung
+- Remote Support
+- Ticketsystem
+- Monitoring
+- Backupverwaltung
+- Inventarisierung
+- PowerShell Center
+- Audit Logs
+- KI-gestützte Administration
+
+## Voraussetzungen
+
+- Windows 10, Windows 11 oder Windows Server
+- Visual Studio 2022
+- .NET-Desktopentwicklung
+- ASP.NET- und Webentwicklung
+- .NET 8 SDK
+- .NET 8 Desktop Runtime
+
+## Projekt kompilieren
+
+```powershell
+dotnet restore
+dotnet build
